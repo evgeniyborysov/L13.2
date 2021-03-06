@@ -14,7 +14,7 @@ body {
 .container {
     max-width: 1920px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 50px 10px;
 }
 
 .hero {
@@ -30,55 +30,81 @@ body {
 }
 
 .hero_title {
+    font-family: Lato;
+    font-size: 54px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: 8.62px;
     margin-bottom: 53px;
 }
 
 .hero_descr {
-    margin-bottom: 245px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 29px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    margin-bottom: 150px;
 }
 
 .hero_scroll {
     margin-bottom: 115px;
 }
 
-.about_container {
-    padding: 50px 0;
-    position: relative;
-}
-
 .about_title {
     font-size: 34px;
     font-weight: 700;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: normal;
     text-align: center;
     text-transform: uppercase;
+}
+
+.about_content {
+    position: relative;
 }
 
 .about_title {
     position: absolute;
     width: 420px;
-    top: 30px;
-    left: 555px;
+    top: -25px;
+    left: calc(50% - 210px);
     background-color: #ffffff;
 }
 
 .about_descr {
     font-size: 16px;
     font-weight: 300;
-    font-style: normal;
-    letter-spacing: normal;
     line-height: 24px;
     text-align: center;
-    padding-top: 65px;
+    padding: 65px 170px 29px;
 }
+
+.about_descr:last-child {
+    text-align: center;
+    padding: 0px 170px 29px;
+}
+
+.services_content {
+    position: relative;
+}
+
+.services_title {
+    position: absolute;
+    width: 420px;
+    top: -25px;
+    left: calc(50% - 210px);
+    background: transparent;
+}
+
 
 .content {
     max-width: 900px;
     margin: 0 auto;
     border: 2px solid #3c3c3c;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .hero_content {
@@ -100,6 +126,102 @@ body {
     background-repeat: no-repeat;
 }
 
+.what_content {
+ position: relative;
+}
+
+.what_title {
+    position: absolute;
+    width: 420px;
+    top: -17px;
+    left: calc(50% - 210px);
+    background-color: #ffffff;
+}
+
+.what_title {
+    color: #3c3c3c;
+    font-size: 34px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.what_items {
+    padding: 0 150px;
+}
+
+.what_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.design,
+.development,
+.Management {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.design .title {
+    color: #3c3c3c;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.design .descr {
+    color: #3c3c3c;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 25.89px;
+}
+
+.development .title {
+    color: #3c3c3c;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.development .descr {
+    color: #3c3c3c;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 25.89px;
+}
+
+.Management .title {
+    color: #3c3c3c;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.Management .descr {
+    color: #3c3c3c;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 25.89px;
+}
+
+
+.design img {
+    padding-top: 100px;
+}
+
+.descr:last-child {
+    padding-bottom: 110px;
+}
+
+.title {
+    padding: 40px 0 40px 0;
+}
+
 .flex_container img {
     width: 100%;
 }
@@ -111,6 +233,23 @@ body {
     /* flex-wrap: wrap; */
     /* gap: 10px; */
 }
+
+.footer_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_content img {
+    margin-right: 30px;
+}
+
+.footer_content h5 {
+    color: #3c3c3c;
+    font-size: 14px;
+    font-weight: 400;
+}
+
 
 @media (max-width: 1200px) {
     .container {
@@ -125,22 +264,31 @@ body {
     .container {
         max-width: 750px;
     }
+
 }
 
 @media (max-width: 767px) {
     .container {
         max-width: none;
     }
-}
-
-.foto_block {
-    /* position: relative; */
-    max-width: 548px;
-}
-
-.foto_block h4 {
-    position: absolute;
-    top: 150px;
-    left: 50px;
-
+    .about_title {
+        font-size: 25px;
+        width: 200px;
+        left: calc(50% - 100px);
+        background-color: #ffffff;
+    }
+    .about_descr {
+        font-size: 15px;
+        line-height: 18px;
+        text-align: center;
+        padding: 40px 60px 29px;
+    }
+    
+    .about_descr:last-child {
+        text-align: center;
+        padding: 0px 60px 29px;
+    }
+    .what_items {
+        padding: 0 25px;
+    }
 }
